@@ -1,0 +1,38 @@
+<script type="text/html" data-template-name="timed position">
+  <div class="form-row">
+    <label for="node-input-friendlyName"><i class="fa fa-tasks"></i> Opening Timeout</label>
+    <input type="text" id="node-input-openTimeout" placeholder="seconds" />
+  </div>
+
+  <div class="form-row">
+    <label for="node-input-friendlyName"><i class="fa fa-tasks"></i> Closing Timeout</label>
+    <input type="text" id="node-input-closeTimeout" placeholder="seconds" />
+  </div>
+</script>
+
+<script type="text/javascript">
+RED.nodes.registerType("timed position", {
+  category: "function",
+  color: "#C7E9C0",
+  defaults: {
+    name: { value: "" },
+    openTimeout: {
+      value: 25,
+      required: true,
+      validate: RED.validators.number(),
+    },
+    closeTimeout: {
+      value: 25,
+      required: true,
+      validate: RED.validators.number(),
+    },
+  },
+  inputs: 1,
+  outputs: 1,
+  icon: "font-awesome/fa-clock-o",
+
+  label() {
+    return this.name || "timed position"
+  },
+})
+</script>

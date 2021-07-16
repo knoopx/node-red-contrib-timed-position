@@ -1,0 +1,17 @@
+{
+  "name": "node-red-contrib-timed-position",
+  "version": "1.0.0",
+  "description": "estimates position based on time",
+  "author": "Víctor Martínez",
+  "license": "ISC",
+  "node-red": {
+    "nodes": {
+      "timed-position": "timed-position.js"
+    }
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/jest": "^26.0.24",
+    "jest": "^27.0.6"
+  }
+}
